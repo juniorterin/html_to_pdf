@@ -44,7 +44,7 @@ try {
             headless: true
         });
         const page = await browser.newPage();
-        await page.goto(`data:text/html,${finalHtml}`, {
+        await page.goto(`data:text/html;charset=UTF-8,${finalHtml}`, {
             waitUntil: 'networkidle0'
         });
         await page.pdf(options);
